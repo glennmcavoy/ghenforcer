@@ -1,0 +1,16 @@
+name: GHEnforcer
+
+on: [pull_request]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+    - name: Enforce github rules
+      id: ghenforcer-run
+      uses: ./.github/actions/ghenforcer
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}

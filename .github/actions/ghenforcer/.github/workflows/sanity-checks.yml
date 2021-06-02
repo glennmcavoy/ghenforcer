@@ -1,0 +1,10 @@
+on: [pull_request]
+
+jobs:
+  sanity_check:
+    runs-on: ubuntu-latest
+    name: Sanity check naming and relations
+    steps:
+      - name: Check
+        id: check
+        uses: sitepodmatt/discipline@v1

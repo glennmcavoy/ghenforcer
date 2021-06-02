@@ -1,0 +1,13 @@
+name: 'GHEnforcer'
+author: 'Matt Freeman <matt@bigdudeclothing.co.uk>'
+description: 'Enforce various github rules'
+inputs:
+  repo_token:
+    description: 'repo token'
+    required: true
+  github_token:
+    description: 'github token'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
